@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Wi-Fi Attendance";
+}
+
+<h2>Wi-Fi Attendance System</h2>
+
+<p>Please enter your name to mark attendance.</p>
+
+<form asp-controller="Home"
+      asp-action="UpdateAttandance"
+      method="post">
+
+    <div>
+        <label>User Name</label><br />
+        <input type="text"
+               name="UserName"
+               placeholder="Enter your name"
+               required />
+    </div>
+
+    <br />
+
+    <button type="submit">Mark Attendance</button>
+</form>

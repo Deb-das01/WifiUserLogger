@@ -1,0 +1,10 @@
+{
+    "WifiName": "College_WiFi",
+    "GatewayIP": "192.168.1.1",
+    "AllowedSubnet": "192.168.1.",
+    "ExcelFileName": "Attendance_sheet.xlsx",
+    "SheetNamePrefix": "Attendance_",
+    "AllowMultipleEntriesPerDay": false,
+    "AttendanceStartTime": "09:00",
+    "AttendanceEndTime": "17:00"
+};

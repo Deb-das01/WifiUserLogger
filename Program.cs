@@ -9,6 +9,8 @@ namespace WifiUserLogger
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
+            builder.Services.AddAuthentication(Microsoft.AspNetCore.Server.IISIntegration.IISDefaults.AuthenticationScheme);
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -24,6 +26,7 @@ namespace WifiUserLogger
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.MapControllerRoute(

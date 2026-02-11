@@ -4,21 +4,22 @@
 
 <h2>Wi-Fi Attendance System</h2>
 
-<p>Please enter your name to mark attendance.</p>
+<p>
+    Welcome, <strong>@User.Identity?.Name</strong>
+</p>
 
-<form asp-controller="Home"
-      asp-action="UpdateAttandance"
-      method="post">
-
-    <div>
-        <label>User Name</label><br />
-        <input type="text"
-               name="UserName"
-               placeholder="Enter your name"
-               required />
+@if (ViewBag.AlreadyMarked == true)
+{
+    <div style="color:green;">
+        ✅ Attendance marked for today.
     </div>
+}
+else
+{
+    <form asp-controller="Home"
+          asp-action="UpdateAttendance"
+          method="post">
 
-    <br />
-
-    <button type="submit">Mark Attendance</button>
-</form>
+        <button type="submit">Mark Attendance</button>
+    </form>
+}
